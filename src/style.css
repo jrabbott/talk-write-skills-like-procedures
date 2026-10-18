@@ -427,6 +427,73 @@ body {
   line-height: 1.5;
 }
 
+/* —— Before/after readability —— */
+
+.synthetic-label {
+  margin: 0 0 0.35em;
+  font-size: 0.7em;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: none;
+  color: var(--accent);
+}
+
+.synthetic-label-on-dark {
+  color: var(--accent-soft);
+}
+
+.lede {
+  margin: 0;
+  font-size: 1.15em;
+  max-width: var(--content-max);
+  line-height: var(--body-line-height);
+  color: var(--ink);
+}
+
+.example-text {
+  margin: 0;
+  font-size: 0.92em;
+  line-height: 1.5;
+  letter-spacing: var(--body-letter-spacing);
+  word-spacing: var(--body-word-spacing);
+}
+
+.example-text-large {
+  font-size: 1.15em;
+  max-width: 22em;
+}
+
+.example-steps {
+  margin: 0;
+  padding-left: 1.15em;
+  font-size: 0.85em;
+  line-height: 1.45;
+}
+
+.example-steps li {
+  margin: 0.35em 0;
+}
+
+.slide-ba .modes {
+  max-width: 34em;
+  gap: 1.1em;
+}
+
+.slide-ba .mode-col .mode-head {
+  font-size: 0.95em;
+  padding: 0.35em 0.5em;
+  margin-bottom: 0.45em;
+}
+
+.slide-ba .content-pad {
+  padding-top: 1.4em;
+}
+
+.slide-ba h2 {
+  font-size: 1.25em;
+  margin-bottom: 0.35em;
+}
+
 /* Utility */
 
 .sr-only {
