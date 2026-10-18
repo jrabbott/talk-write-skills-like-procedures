@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Slides as code — reusable Vite + reveal.js starter template for talks"
+    />
+    <title>Slides as code</title>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- 1. Title -->
+        <section class="slide-title" data-background-color="#f2eee6">
+          <div class="title-stack">
+            <p class="eyebrow">Slides as code</p>
+            <h1>Talk title</h1>
+            <p class="speakers">Your name</p>
+          </div>
+        </section>
+
+        <!-- 2. Section -->
+        <section class="slide-section" data-background-color="#0c6b52">
+          <h2>Section title</h2>
+        </section>
+
+        <!-- 3. List with fragments -->
+        <section class="slide-list" data-background-color="#f2eee6">
+          <div class="content-pad content-pad-tight">
+            <h2>Key points</h2>
+            <ul>
+              <li class="fragment">
+                One idea per slide beats a wall of text
+              </li>
+              <li class="fragment">
+                Put the detail in speaker notes, not on the slide
+              </li>
+              <li class="fragment">
+                Short lines and calm layouts are easier to follow
+              </li>
+            </ul>
+          </div>
+          <aside class="notes">
+            Add speaker notes here. Treat notes as trusted HTML only.
+          </aside>
+        </section>
+
+        <!-- 4. Modes (2-column) -->
+        <section class="slide-modes" data-background-color="#f2eee6">
+          <div class="content-pad">
+            <h2>Compare options</h2>
+            <div class="modes">
+              <div class="mode-col">
+                <div class="mode-head">Option A</div>
+                <p class="label">Works with</p>
+                <ul>
+                  <li>Short talks</li>
+                  <li>Clear structure</li>
+                </ul>
+                <p class="label">Watch for</p>
+                <ul>
+                  <li>Too much detail</li>
+                </ul>
+              </div>
+              <div class="mode-col">
+                <div class="mode-head">Option B</div>
+                <p class="label">Works with</p>
+                <ul>
+                  <li>Workshops</li>
+                  <li>Live demos</li>
+                </ul>
+                <p class="label">Watch for</p>
+                <ul>
+                  <li>Timing drift</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. Gallery (2×2) -->
+        <section class="slide-gallery" data-background-color="#f2eee6">
+          <div class="gallery-grid">
+            <img src="assets/gallery-1.svg" alt="Gallery placeholder A" />
+            <img src="assets/gallery-2.svg" alt="Gallery placeholder B" />
+            <img src="assets/gallery-3.svg" alt="Gallery placeholder C" />
+            <img src="assets/gallery-4.svg" alt="Gallery placeholder D" />
+          </div>
+        </section>
+
+        <!-- 6. Diagram -->
+        <section class="slide-diagram" data-background-color="#f2eee6">
+          <div class="diagram-frame">
+            <img
+              src="assets/diagram-placeholder.svg"
+              alt="Placeholder architecture diagram"
+            />
+          </div>
+        </section>
+
+        <!-- 7. Split (text + media) -->
+        <section class="slide-split" data-background-color="#f2eee6">
+          <div class="content-pad">
+            <h2>Supporting detail</h2>
+            <div class="split-body">
+              <ul>
+                <li>One solid paper colour keeps every content slide calm</li>
+                <li>
+                  Use <code>slide-split</code> when a diagram sits beside points
+                </li>
+                <li>Delete sample slides you do not use</li>
+              </ul>
+              <img
+                class="diagram-card"
+                src="assets/diagram-placeholder.svg"
+                alt="Placeholder diagram card"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- 8. Code -->
+        <section class="slide-code" data-background-color="#f2eee6">
+          <div class="content-pad content-pad-tight">
+            <h2>Code on slides</h2>
+            <pre><code class="language-javascript" data-trim data-line-numbers="1-3|5-7">
+              // Vite resolves the Pages base path for you
+              const base = import.meta.env.BASE_URL;
+
+              Reveal.initialize({
+                hash: true,
+                plugins: [Highlight, Notes],
+              });
+            </code></pre>
+          </div>
+          <aside class="notes">
+            Step through highlighted lines with fragments via data-line-numbers.
+          </aside>
+        </section>
+
+        <!-- 9. Alt section -->
+        <section
+          class="slide-section section-alt"
+          data-background-color="#121820"
+        >
+          <h2>Alternate section</h2>
+        </section>
+
+        <!-- 10. Closing -->
+        <section class="slide-closing" data-background-color="#121820">
+          <div class="closing-stack">
+            <h2>Thanks</h2>
+            <p class="contact">you@example.com</p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
