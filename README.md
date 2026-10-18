@@ -1,21 +1,23 @@
-# Slides as code
+# Write skills like procedures
 
-Reusable Vite + [reveal.js](https://revealjs.com/) starter for talk decks. The default theme is tuned for readability (Atkinson Hyperlegible, solid paper surface, quiet motion)—set CSS variables and add assets per talk.
+Talk deck: Simplified Technical English for agent skills. Built on a Vite + [reveal.js](https://revealjs.com/) scaffold.
 
-**Live deck (after Pages is enabled):** [https://jrabbott.github.io/slides-as-code/](https://jrabbott.github.io/slides-as-code/)
+**Live deck:** [https://jrabbott.github.io/talk-write-skills-like-procedures/](https://jrabbott.github.io/talk-write-skills-like-procedures/)
 
-## Requirements
+## Talk in one sentence
+
+Agent skills are procedures, not prompt poetry — write them with STE-shaped clarity so the agent can’t misunderstand the next action.
+
+## Requirements & run locally
 
 - **Node.js 22+** (see `.nvmrc`). Prefer `npm ci` so the lockfile is respected.
-
-## Run locally
 
 ```bash
 npm ci
 npm run dev
 ```
 
-Open the URL Vite prints (usually `http://localhost:5173/slides-as-code/`).
+Open the URL Vite prints (usually `http://localhost:5173/talk-write-skills-like-procedures/`).
 
 To check the production build:
 
@@ -24,86 +26,31 @@ npm run build
 npm run preview
 ```
 
-Dependency audit (also runs in CI):
-
-```bash
-npm run audit
-```
-
 ## Present
 
 1. Start with `npm run dev` (or open the live Pages URL).
 2. Click the slides, then use arrow keys / space to navigate.
 3. Press `F` for fullscreen, `S` for speaker notes, `Esc` for overview.
-4. Slide numbers and URL hashes are enabled so you can deep-link to a slide.
-5. Fragments advance with the same keys; code blocks can step line ranges via `data-line-numbers`.
+4. After the CTA, paste [`cheat-sheet.md`](cheat-sheet.md) into chat.
 
-Speaker notes in `<aside class="notes">` are author-controlled HTML rendered by reveal.js in the speaker view. Treat them as trusted content only—do not paste untrusted markup into notes.
+Speaker notes live in `<aside class="notes">`. Treat them as trusted HTML only.
 
-## New talk checklist
+## Deck outline
 
-1. Use this repo as a GitHub template (Settings → **Template repository**) or clone it.
-2. Rename the package in `package.json` to match the new repo name (local `vite` base falls back to that name).
-3. CI/CD sets `BASE_PATH` from the GitHub repository name automatically—no `vite.config.js` edit required for project Pages.
-4. Replace title, meta description, speakers, and sample slides in `index.html`.
-5. Customize brand tokens in `src/style.css` (`--ink`, `--accent`, spacing vars, etc.).
-6. In the new repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+- Title — Write skills like procedures
+- Personal open — dyslexia → LLMs → STE → how it helps read & write → thesis
+- STE → skill mapping — four conventions; anti-patterns in one breath
+- Before/after — Example A (vague verbs); Example C (nested conditionals); synthetic only
+- Risks — too rigid; keep exact tokens; no full STE checker yet
+- CTA — rewrite one skill’s Steps + Do not; cheat sheet in chat
+- Stretch (to 25) — Example B, Example D, anti-pattern table, Q&A hold
 
-### Layout classes in the sample deck
+Author outline: [`docs/outline.md`](docs/outline.md). Handout: [`cheat-sheet.md`](cheat-sheet.md).
 
-| Class | Use |
-| --- | --- |
-| `slide-title` | Opening title + speakers |
-| `slide-section` / `section-alt` | Full-bleed section breaks |
-| `slide-list` | Bullets (optional `fragment`) |
-| `slide-modes` | Two-column comparison |
-| `slide-gallery` | 2×2 image grid |
-| `slide-diagram` | Full-bleed diagram |
-| `slide-split` | Text + side diagram |
-| `slide-code` | Syntax-highlighted code (`Highlight` plugin) |
-| `slide-closing` | Thanks / contact |
+## Pages
 
-Override the Pages base locally when needed:
+After merge: **Settings → Pages → Build and deployment → Source: GitHub Actions** (if not already set).
 
-```bash
-BASE_PATH=/my-talk/ npm run build
-```
+## License
 
-## Theming
-
-Brand tokens live at the top of `src/style.css`:
-
-```css
-:root {
-  --ink: #121820;
-  --muted: #2c3544;
-  --surface: #f2eee6;
-  --accent: #0c6b52;
-  --accent-soft: #c5e4d8;
-  --on-accent: #f2eee6;
-  --closing: #121820;
-}
-```
-
-Content slides share one solid paper colour (`--surface`). Section and closing slides use solid accent or ink. Defaults lean dyslexia-friendly:
-
-- [Atkinson Hyperlegible](https://brailleinstitute.org/freefont) with open letter/word spacing
-- Sentence-case labels; prefer **bold** over italic for emphasis
-- Quiet motion (`transition: 'none'`; plain `fragment` without travel)
-- Light syntax colours on paper (no dark Monokai block)
-- Calmer 1–2 column layouts
-
-Swap fonts via `@fontsource/atkinson-hyperlegible` in `src/main.js` and the `--r-*-font` / spacing variables.
-
-## CI and publish
-
-Shared quality gate lives in `.github/actions/build` (`npm ci`, audit, Vite build with repo-derived `BASE_PATH`, `dist/` smoke check).
-
-- **CI** (`.github/workflows/ci.yml`) runs that action on pull requests.
-- **CD** (`.github/workflows/cd.yml`) runs the same action on pushes to `main` (or `workflow_dispatch`), uploads `dist/`, and deploys to GitHub Pages.
-
-Dependabot watches npm and GitHub Actions weekly.
-
-## Scaffold
-
-Vite + reveal.js 6 with Atkinson Hyperlegible, a solid paper surface + teal accent palette, quiet transitions, Highlight + Notes plugins, calm 1–2 column layouts, and project Pages base path derived from the repo / package name.
+[MIT](LICENSE) © 2026 Jon Abbott

@@ -1,9 +1,9 @@
 {
-  "name": "slides-as-code",
+  "name": "talk-write-skills-like-procedures",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Reusable Vite + reveal.js starter with a readability-first (Atkinson Hyperlegible) slide theme",
+  "description": "Write skills like procedures — Simplified Technical English for agent skills (Vite + reveal.js talk deck)",
   "engines": {
     "node": ">=22"
   },
